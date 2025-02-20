@@ -91,11 +91,16 @@
 # print(factorial(a))
 
 # 10870 피보나치 수 : 수열 문제
-def pibo(n):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    return pibo(n-1) + pibo(n-2)
-n = int(input())
-print(pibo(n))
+# def pibo(n):
+#     if n == 0:
+#         return 0
+#     if n == 1:
+#         return 1
+#     return pibo(n-1) + pibo(n-2)
+# n = int(input())
+# print(pibo(n))
+
+# 15596 함수 구현
+# def solve(a: list) -> int , 타입 힌트란?
+#
+def solve(a: list) -> int
