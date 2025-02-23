@@ -103,4 +103,22 @@
 # 15596 함수 구현
 # def solve(a: list) -> int , 타입 힌트란?
 #
-def solve(a: list) -> int
+# def solve(a: list) -> int
+
+# 2292 벌집
+# 첫번째는 1, 그 다음부터 6의 배수만큼 갯수 증가
+# search = int(input())
+# def solve(search):
+#     distance = 1
+#     start = 1
+#     end = 1
+#
+#     while not(start <= search <= end):
+#         start = end + 1
+#         end = start + 6 * distance - 1
+#         distance += 1
+#
+#     return distance
+#
+# print(solve(search))
+
