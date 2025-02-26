@@ -122,3 +122,44 @@
 #
 # print(solve(search))
 
+# 2501 약수 구하기
+# import sys
+# a, b = map(int, sys.stdin.readline().split())
+# lst = [i for i in range(1, a+1) if a % i == 0] # 약수들 담긴 리스트
+# print(lst[b-1] if b-1 < len(lst) else 0)
+
+
+# 5086 배수와 약수
+# import sys
+#
+# while True:
+#     a, b = map(int, sys.stdin.readline().split())
+#
+#     if a == 0 and b == 0:
+#         break
+#     if b % a == 0:
+#         print('factor')
+#     elif a % b == 0:
+#         print('multiple')
+#     else:
+#         print('neither')
+
+# 9506 약수들의 합
+# import sys
+#
+# while True:
+#     a = int(sys.stdin.readline())
+#     lst = [i for i in range(1, a) if a % i == 0] # 약수 보관함.
+#
+#     if a == -1:
+#         break
+#
+#     if a == sum(lst):
+#         result = ' + '.join(map(str, lst))
+#         print(f"{a} = {result}")
+#     else:
+#         print(f"{a} is NOT perfect.")
+
+# 1978 소수 찾기
+import sys
+n = int(sys.stdin.readline())
