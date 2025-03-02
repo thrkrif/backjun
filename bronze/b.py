@@ -161,5 +161,119 @@
 #         print(f"{a} is NOT perfect.")
 
 # 1978 소수 찾기
-import sys
-n = int(sys.stdin.readline())
+# 소수란? 1과 자기 자신만 약수로 가지는 수 -> 약수가 2개여야 한다.
+# import sys
+# n = int(sys.stdin.readline())
+# lst = list(map(int, sys.stdin.readline().split()))
+# result = []
+# for i in lst:
+#     count = 0
+#     for j in range(1,i+1):
+#         if i % j == 0:
+#             count += 1
+#     if count == 2:
+#         result.append(i)
+# print(len(result))
+
+# 2581 소수 : 실행 속도가 4.8초나 나옴.
+# m = int(input())
+# n = int(input())
+# result = []
+# for i in range(m, n+1):
+#     count = 0
+#     for j in range(1, i+1):
+#         if i % j == 0:
+#             count += 1
+#     if count == 2:
+#         result.append(i)
+#
+# if len(result) == 0:
+#     print(-1)
+# else:
+#     print(sum(result))
+#     print(min(result))
+
+# 2581 소수 문제는 제곱근을 사용하여 풀어라. 시간 복잡도가 제곱근 만큼 줄음.
+# import sys
+# import math
+#
+# def is_prime(num):
+#     if num < 2:
+#         return False
+#     for i in range(2, int(math.sqrt(num)) + 1):  # 제곱근까지만 확인
+#         if num % i == 0:
+#             return False
+#     return True
+#
+# m = int(sys.stdin.readline())
+# n = int(sys.stdin.readline())
+#
+# result = [i for i in range(m, n+1) if is_prime(i)]
+#
+# if not result:
+#     print(-1)
+# else:
+#     print(sum(result))
+#     print(min(result))
+
+# 11653 소인수 분해 : 결과가 소수가 될 때 까지 계속 소수들로 나누는 거임.
+# 지금 푼거 거의 다 맞았는데 마지막 수가 print가 안된다.
+# import math
+# a = int(input())
+#
+# # 소수 판별하는 함수
+# def prime(x):
+#     if x < 2:
+#         return False
+#     for i in range(2,int(math.sqrt(x)) + 1):
+#         if x % i == 0:
+#             return False
+#     return True
+# def prime_fac(x):
+#
+#     if prime(x):
+#         print(int(x))
+#     for i in range(2,int(math.sqrt(x)) + 1):
+#         if x % i == 0:
+#             print(i)
+#             x = x / i
+#             return prime_fac(x)
+#
+# prime_fac(a)
+
+# 11653 더 나은 버전
+# import math
+#
+# def prime_fac(x):
+#     for i in range(2, int(math.sqrt(x)) + 1):
+#         while x % i == 0:  # i로 나누어 떨어지면 계속 나눔
+#             print(i)
+#             x //= i  # 정수 나눗셈
+#
+#     if x > 1:  # 남아있는 값이 1보다 크면 소수임
+#         print(x)
+#
+# a = int(input())
+# prime_fac(a)
+
+# 24263 알고리즘 수업 2
+# for문을 한 번 돈다. O(n) 이므로 차수는 1차이다.
+# n = int(input())
+# print(n)
+# print(1)
+
+# 24264
+# n = int(input())
+# print(n**2)
+# print(2)
+
+# 24265
+# n = int(input())
+# print(n * (n-1) // 2)
+# print(2)
+
+# 24266
+# n = int(input())
+# print(n ** 3)
+# print(3)
+
