@@ -65,5 +65,37 @@
 # print(b.add())
 # print(b.pow())
 
+# import sys
+# print(sys.path)
 
+# 에외 처리
+#
+# try:
+#     4 / 0
+# except ZeroDivisionError as e:
+#     print(e)
+
+#  두 개 이상의 오류를 회피하고 싶다면 ()를 사용하면 된다.
+# try:
+#     a = [1,2]
+#     print(a[2])
+#     print(4/0)
+# except (IndexError, ZeroDivisionError) as e:
+#     print(e)
+
+# 내가 예외를 직접 만들 수 있음 : Exception을 상속 받기
+class MyError(Exception):
+    pass
+
+def say_nick(nick):
+    if nick == '바보':
+        raise MyError() # 예외를 터트릴 수 있음.
+    print(nick)
+
+# 예외를 잡을 수 있음
+try:
+    say_nick("천사")
+    say_nick("바보")
+except MyError:
+    print("허용되지 않는 별명입니다.")
 
